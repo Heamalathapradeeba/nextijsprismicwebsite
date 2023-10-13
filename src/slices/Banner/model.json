@@ -1,0 +1,200 @@
+{
+  "id": "banner",
+  "type": "SharedSlice",
+  "name": "Banner",
+  "description": "Banner",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "bannerimage": {
+          "type": "Image",
+          "config": {
+            "label": "BannerImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "strong,heading4"
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "buttontext": {
+          "type": "Text",
+          "config": {
+            "label": "ButtonText",
+            "placeholder": ""
+          }
+        },
+        "institutiontext": {
+          "type": "StructuredText",
+          "config": {
+            "label": "InstitutionText",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "strong,heading5"
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "secondSection",
+      "name": "Second Section",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "authorname": {
+          "type": "StructuredText",
+          "config": {
+            "label": "AuthorName",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "strong,heading5"
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "buttontext": {
+          "type": "Text",
+          "config": {
+            "label": "Buttontext",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "fifthSection",
+      "name": "FifthSection",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "strong"
+          }
+        },
+        "subheading1": {
+          "type": "StructuredText",
+          "config": {
+            "label": "SubHeading1",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Paragraph1",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "subheading2": {
+          "type": "StructuredText",
+          "config": {
+            "label": "SubHeading2",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "paragraph2": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Paragraph2",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "buttontext": {
+          "type": "Text",
+          "config": {
+            "label": "Buttontext",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
