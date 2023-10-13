@@ -1,21 +1,13 @@
 .main {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* padding: 6rem; */
   min-height: 100vh;
   font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
 }
 
 .header {
-  /* display: inherit; */
-  /* justify-content: inherit;
-  align-items: inherit; */
   font-size: 0.85rem;
   position: relative;
-  /* z-index: 2; */
-  font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
 }
 
 .description a {
@@ -95,15 +87,8 @@
 .headerContent{
   align-items: center;
   justify-content: space-around;
+  padding: 0.3% 0;
 }
-/* 
-.headerColor{
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  
-} */
 
 .changedColor, .heading1{
   color:#d10807 !important;
@@ -115,7 +100,6 @@
   padding: 0;
   flex-direction: column;
   font-size: 14px;
-  font-weight: 600;
   transition: right 0.3s ease-in-out;
   /* position: absolute;
   top: 70px;
@@ -147,7 +131,6 @@
   padding: 8px 30px;
   border: none;
   font-size: 14px;
-  font-weight: 600;
 }
 
 .loginButton, .exploreButton{
@@ -167,13 +150,12 @@
 
 }
 
-.goButtonText{
+.goButtonText, .goButtonText:hover{
   text-decoration: none;
   color: #ffffff;
 }
 
 .section2{
-  text-align: center;
   padding: 1.5% 0;
   align-items: center;
 }
@@ -182,15 +164,17 @@
   z-index: -1;
   width: 100%;
   height: 90vh;
+  position: relative;
+  bottom: 15%;
 }
 
 .exploreRow{
   align-items: center;
   justify-content: space-evenly;
   position: absolute;
-  bottom: -7%;
+  bottom: -3%;
   background-color: #0d0c0c87;
-  padding: 2.5% 0;
+  padding: 2% 0;
   width: 100%;
 }
 
@@ -198,7 +182,6 @@
   color: #ffffff;
   font-size: 20px;
   font-weight: 500;
-  text-align: left;
   align-items: flex-start;
 }
 
@@ -256,6 +239,10 @@
   color: white;
 }
 
+.sdndescription1{
+  color: #5a5a5a;
+}
+
 .carouselSection{
   padding: 4%;
 }
@@ -306,11 +293,6 @@
   border-radius: 20px;
 }
 
-.slideItem p{
-  font-weight: 600;
-  text-align: center;
-}
-
 .carouselButton{
   border-radius: 20px;
   padding: 0.5% 1%;
@@ -352,11 +334,8 @@
   align-self: flex-start;
 }
 
-.footerHeading1, .footerHeading2, .footerHeading3{
-  font-weight: 600;
-}
-
-.carouselButton, .loginButton, .exploreButton{
+.carouselButton, .slideItem p, .loginButton, .exploreButton, .goButton,
+.footerHeading1, .footerHeading2, .footerHeading3, .headerList, .hideList{
   font-weight: 600;
 }
 
@@ -384,7 +363,6 @@
   list-style: none;
   text-decoration: none;
   color: #ffffff;
-  text-align: left;
   text-decoration: none;
   letter-spacing: 1;
   font-size: 15px;
@@ -430,8 +408,12 @@
 
 .contactGroup > p{
   font-weight: 800;
+}
 
- }
+
+.bannerText, .heading1, .section2, .footerList > li > a, .footerItem4 > span, .slideItem p, .carouselButton{
+  text-align: center;
+}
 
 .copyright{
   align-items: center;
@@ -480,7 +462,6 @@
 
   .carouselButton{
     width: 70%;
-    text-align: center;
     align-items: center;
     justify-content: center;
     padding: 1.5%;
@@ -495,18 +476,6 @@
   .description a {
     padding: 1rem;
   }
-
- 
-  /* .description p {
-    align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
-  } */
-
 }
 
 @media only screen and (min-width: 768px){

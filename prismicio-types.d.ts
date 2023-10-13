@@ -106,7 +106,10 @@ export type HeaderDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomeDocumentDataSlicesSlice = BannerSlice;
+type HomeDocumentDataSlicesSlice =
+  | SecondSectionSlice
+  | FifthSectionSlice
+  | BannerSlice;
 
 /**
  * Content for Home documents
@@ -842,6 +845,216 @@ type BannerSliceVariation =
  */
 export type BannerSlice = prismic.SharedSlice<"banner", BannerSliceVariation>;
 
+/**
+ * Primary content in *FifthSection → Primary*
+ */
+export interface FifthSectionSliceDefaultPrimary {
+  /**
+   * Heading field in *FifthSection → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifth_section.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * SubHeading1 field in *FifthSection → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifth_section.primary.subheading1
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  subheading1: prismic.RichTextField;
+
+  /**
+   * Paragraph1 field in *FifthSection → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifth_section.primary.paragraph1
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph1: prismic.RichTextField;
+
+  /**
+   * SubHeading2 field in *FifthSection → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifth_section.primary.subheading2
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  subheading2: prismic.RichTextField;
+
+  /**
+   * Paragraph2 field in *FifthSection → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifth_section.primary.paragraph2
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph2: prismic.RichTextField;
+
+  /**
+   * Link field in *FifthSection → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifth_section.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * ButtonText field in *FifthSection → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifth_section.primary.buttontext
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  buttontext: prismic.KeyTextField;
+
+  /**
+   * Image field in *FifthSection → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifth_section.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for FifthSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FifthSectionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FifthSectionSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *FifthSection*
+ */
+type FifthSectionSliceVariation = FifthSectionSliceDefault;
+
+/**
+ * FifthSection Shared Slice
+ *
+ * - **API ID**: `fifth_section`
+ * - **Description**: FifthSection
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FifthSectionSlice = prismic.SharedSlice<
+  "fifth_section",
+  FifthSectionSliceVariation
+>;
+
+/**
+ * Primary content in *SecondSection → Primary*
+ */
+export interface SecondSectionSliceDefaultPrimary {
+  /**
+   * Heading field in *SecondSection → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: second_section.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.TitleField;
+
+  /**
+   * Text field in *SecondSection → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: second_section.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * AuthorName field in *SecondSection → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: second_section.primary.authorname
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  authorname: prismic.RichTextField;
+
+  /**
+   * Link field in *SecondSection → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: second_section.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * ButtonText field in *SecondSection → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: second_section.primary.buttontext
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  buttontext: prismic.KeyTextField;
+
+  /**
+   * Image field in *SecondSection → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: second_section.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for SecondSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SecondSectionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SecondSectionSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SecondSection*
+ */
+type SecondSectionSliceVariation = SecondSectionSliceDefault;
+
+/**
+ * SecondSection Shared Slice
+ *
+ * - **API ID**: `second_section`
+ * - **Description**: SecondSection
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SecondSectionSlice = prismic.SharedSlice<
+  "second_section",
+  SecondSectionSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -880,6 +1093,14 @@ declare module "@prismicio/client" {
       BannerSliceDefault,
       BannerSliceSecondSection,
       BannerSliceFifthSection,
+      FifthSectionSlice,
+      FifthSectionSliceDefaultPrimary,
+      FifthSectionSliceVariation,
+      FifthSectionSliceDefault,
+      SecondSectionSlice,
+      SecondSectionSliceDefaultPrimary,
+      SecondSectionSliceVariation,
+      SecondSectionSliceDefault,
     };
   }
 }

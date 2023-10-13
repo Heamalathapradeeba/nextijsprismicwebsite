@@ -1,11 +1,8 @@
 
 
 import React, {useEffect, useState} from 'react';
-import Image from 'next/image';
 import styles from './page.module.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import Link from 'next/link';
-import { Metadata } from "next";
 import { PrismicRichText, SliceZone } from "@prismicio/react";
 import { createClient } from '@/prismicio';
 import { components } from "@/slices";
@@ -46,8 +43,8 @@ export default async function Home() {
      <header className={styles.headerContent}>
                <PrismicNextImage field={header.data.logo}  
               className={styles.vercelLogo}
-              width={217}
-              height={107} />
+              width={197}
+              height={77} />
             {/* <div className={`${styles.hamburger} ${isOpen ? styles.open : ''}`}
              onClick={() => setIsOpen(!isOpen)}> */}
                <div className={`${styles.hamburger} ${isOpen ? styles.open : ''}`}> 
@@ -156,6 +153,7 @@ export default async function Home() {
               footer.data.footerlogogroup.map(({logo, text}) => (
                 <>
                 <PrismicNextImage field={logo} className={styles.vercelLogo}
+                priority
                 width={217}
                 height={107} />
                 <PrismicRichText field={text} />  
@@ -213,7 +211,7 @@ export default async function Home() {
         }
       </div>
         <br />
-        <span className={styles.copyright}>Copyright &copy; 2023 All Rights Reserved</span>
+        <span className={styles.copyright}>Copyright &copy; {new Date().getFullYear()} All Rights Reserved</span>
         <br />
        </footer>
     </main>

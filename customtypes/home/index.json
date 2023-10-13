@@ -28,6 +28,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "second_section": {
+              "type": "SharedSlice"
+            },
+            "fifth_section": {
+              "type": "SharedSlice"
+            },
             "banner": {
               "type": "SharedSlice"
             }
